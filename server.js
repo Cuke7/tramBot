@@ -1,7 +1,5 @@
 const express = require("express");
-const { sessionEntitiesHelper } = require("actions-on-google-dialogflow-session-entities-plugin");
-const { WebhookClient } = require("dialogflow-fulfillment");
-const { Card, Suggestion } = require("dialogflow-fulfillment");
+
 const app = express();
 
 var axios = require("axios");
@@ -9,7 +7,6 @@ var axios = require("axios");
 app.get("/", (req, res) => res.send("online"));
 
 app.post("/dialogflow", express.json(), (req, res) => {
-    const agent = new WebhookClient({ request: req, response: res });
     //console.log(req.body);
     let query = req.body.queryResult.queryText;
     let parameters = req.body.queryResult.parameters;
