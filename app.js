@@ -19,10 +19,10 @@ app.post("/dialogflow", express.json(), (req, res) => {
     let intent = req.body.queryResult.intent.displayName;
 
     if (intent == "get_lines") {
-        console.log("In get_lines fallback intent");
-        //console.log(req.body);
+        console.log("In get_lines");
+        console.log(req.body);
 
-        console.log(JSON.parse(req.body.queryResult.parameters.lines)); // => toto
+        //console.log(JSON.parse(req.body.queryResult.parameters.lines)); // => toto
 
         // URL = "https://ws.infotbm.com/ws/1.0/get-realtime-pass/" + toto.id.split("TBC:SP:")[0] + "/" + "23"
 
@@ -80,7 +80,9 @@ app.post("/dialogflow", express.json(), (req, res) => {
                                 }
                             }
 
-                            console.log(entities);
+                            //console.log(entities);
+
+                            //prepare_intent(req, res, quickReplies, entities, "lines", "J'ai trouvé les lignes", "get_lines");
 
                             res.send({
                                 fulfillmentMessages: [
@@ -176,4 +178,31 @@ function getContextParameters(contextParameters) {
             return context.parameters;
         }
     }
+}
+
+function prepare_intent(req, res, quickReplies, entities, entityName, textMessage, intentName) {
+    console.log("In intent");
+
+    let query = req.body.queryResult.queryText;
+    let parameters = req.body.queryResult.parameters;
+    let session = req.body.session;
+
+    res.send({
+        fulfillmentMessages: [
+            {
+                quickReplies: {
+                    title: textMessage,
+                    quickReplies: quickReplies,
+                },
+                sessionEntityTypes: [
+                    {
+                        name: session + "/entityTypes/" + entityName,
+                        entities: entities,
+                        entityOverrideMode: "ENTITY_OVERRIDE_MODE_OVERRIDE",
+                    },
+                ],
+                //platform: "DIALOGFLOW_CONSOLE",
+            },
+        ],
+    });
 }

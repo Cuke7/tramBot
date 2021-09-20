@@ -1,40 +1,21 @@
 {
-    "id": "stop_area:TBC:SA:AGAM48",
-    "name": "Avenue Gambetta",
-    "latitude": "44.8179310",
-    "longitude": "-0.6288880",
-    "city": "M\u00e9rignac",
+    "id": "stop_area:TBC:SA:RPAGA",
+    "name": "RPA Gambetta",
+    "latitude": "44.8423010",
+    "longitude": "-0.5389510",
+    "city": "Floirac",
     "stopPoints": [
         {
-            "id": "stop_point:TBC:SP:135",
-            "name": "Avenue Gambetta",
-            "routes": [
-                { "id": "route:TBC:23_R", "name": "MERIGNAC Fontaine d\u0027Arlac", "line": { "id": "line:TBC:23", "name": "Ligne 23", "isSpecial": false, "isChartered": false, "isHidden": false } },
-                { "id": "route:TBC:54", "name": "MERIGNAC Fontaine d\u0027Arlac", "line": { "id": "line:TBC:54", "name": "Flexo 54", "isSpecial": false, "isChartered": false, "isHidden": false } }
-            ],
-            "hasWheelchairBoarding": false
+            "id": "stop_point:TBC:SP:5090",
+            "name": "RPA Gambetta",
+            "routes": [{ "id": "route:TBC:27_R", "name": "BORDEAUX Stalingrad", "line": { "id": "line:TBC:27", "name": "Ligne 27", "isSpecial": false, "isChartered": false, "isHidden": false } }],
+            "hasWheelchairBoarding": true
         },
         {
-            "id": "stop_point:TBC:SP:3212",
-            "name": "Avenue Gambetta",
-            "routes": [
-                { "id": "route:TBC:42_R", "name": "MERIGNAC Place Mondesir", "line": { "id": "line:TBC:42", "name": "Cit\u00e9is 42", "isSpecial": false, "isChartered": false, "isHidden": false } }
-            ],
-            "hasWheelchairBoarding": false
-        },
-        {
-            "id": "stop_point:TBC:SP:3213",
-            "name": "Avenue Gambetta",
-            "routes": [
-                {
-                    "id": "route:TBC:23",
-                    "name": "PESSAC Romainville / PESSAC Toctoucau",
-                    "line": { "id": "line:TBC:23", "name": "Ligne 23", "isSpecial": false, "isChartered": false, "isHidden": false }
-                },
-                { "id": "route:TBC:42", "name": "MERIGNAC Centre", "line": { "id": "line:TBC:42", "name": "Cit\u00e9is 42", "isSpecial": false, "isChartered": false, "isHidden": false } },
-                { "id": "route:TBC:54_R", "name": "PESSAC Bougnard", "line": { "id": "line:TBC:54", "name": "Flexo 54", "isSpecial": false, "isChartered": false, "isHidden": false } }
-            ],
-            "hasWheelchairBoarding": false
+            "id": "stop_point:TBC:SP:5091",
+            "name": "RPA Gambetta",
+            "routes": [{ "id": "route:TBC:27", "name": "LORMONT Buttini\u00e8re", "line": { "id": "line:TBC:27", "name": "Ligne 27", "isSpecial": false, "isChartered": false, "isHidden": false } }],
+            "hasWheelchairBoarding": true
         }
     ]
 }
