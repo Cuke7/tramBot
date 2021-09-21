@@ -78,7 +78,7 @@ app.post("/dialogflow", express.json(), (req, res) => {
                                     fulfillmentMessages: [
                                         {
                                             quickReplies: {
-                                                title: "J'ai trouvé les lignes suivantes",
+                                                title: "J'ai trouvé les lignes suivantes :",
                                                 quickReplies: quickReplies,
                                             },
                                         },
@@ -131,17 +131,32 @@ app.post("/dialogflow", express.json(), (req, res) => {
                                 let messages = [];
                                 // obj[Object.keys(obj)[0]];
                                 for (const result of results) {
-                                    let message = {
-                                        text: {
-                                            text: ["Destination " + result.direction + " : " + result.time.data.destinations[Object.keys(result.time.data.destinations)[0]][0].waittime_text + "."],
-                                        },
-                                    };
+                                    if (!result.time.data.length == 0) {
+                                        let message = {
+                                            text: {
+                                                text: ["Destination " + result.direction + " : " + result.time.data.destinations[Object.keys(result.time.data.destinations)[0]][0].waittime_text + "."],
+                                            },
+                                        };
 
-                                    messages.push(message);
+                                        messages.push(message);
+                                    }
                                 }
-                                res.send({
-                                    fulfillmentMessages: messages,
-                                });
+                                console.log(messages);
+                                if (messages.length > 0) {
+                                    res.send({
+                                        fulfillmentMessages: messages,
+                                    });
+                                } else {
+                                    res.send({
+                                        fulfillmentMessages: [
+                                            {
+                                                text: {
+                                                    text: ["Je ne trouve pas d'horaires, désolé."],
+                                                },
+                                            },
+                                        ],
+                                    });
+                                }
                             })();
 
                             // return axios({
@@ -187,7 +202,7 @@ app.post("/dialogflow", express.json(), (req, res) => {
                 fulfillmentMessages: [
                     {
                         quickReplies: {
-                            title: "J'ai trouvé les arrêts suivants.",
+                            title: "J'ai trouvé les arrêts suivants :",
                             quickReplies: quickReplies,
                         },
                     },
