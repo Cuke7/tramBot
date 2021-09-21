@@ -141,7 +141,7 @@ app.post("/dialogflow", express.json(), (req, res) => {
 
                                         let message = {
                                             text: {
-                                                text: ["Destination " + result.direction + " : " + result.time.data.destinations[Object.keys(result.time.data.destinations)[0]][0].waittime_text + "."],
+                                                text: ["Destination " + result.direction + " : " + arr_sorted[0].waittime_text + "."],
                                             },
                                         };
 
