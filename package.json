@@ -12,7 +12,9 @@
     "license": "ISC",
     "dependencies": {
         "axios": "^0.18.1",
-        "express": "^4.17.1",
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
         "ngrok": "^4.2.2"
     }
 }
