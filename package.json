@@ -6,8 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "tunnel": "ngrok http 8080",
-        "start": "node server.js",
-        "build": "npm install --production"
+        "start": "node server.js"
     },
     "author": "",
     "license": "ISC",
