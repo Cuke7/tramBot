@@ -108,13 +108,13 @@ app.post("/dialogflow", express.json(), (req, res) => {
 
                                     let regex2 = /[A-Z].* /;
 
-                                    console.log(direction);
+                                    //console.log(direction);
 
                                     let lineID = direction.route.line.name.split(regex2)[1];
 
-                                    console.log("Stop : " + stopID + ", line : " + lineID);
+                                    //console.log("Stop : " + stopID + ", line : " + lineID);
 
-                                    console.log("https://ws.infotbm.com/ws/1.0/get-realtime-pass/" + stopID + "/" + lineID);
+                                    //console.log("https://ws.infotbm.com/ws/1.0/get-realtime-pass/" + stopID + "/" + lineID);
 
                                     results.push({
                                         direction: direction.route.name,
@@ -131,7 +131,14 @@ app.post("/dialogflow", express.json(), (req, res) => {
                                 let messages = [];
                                 // obj[Object.keys(obj)[0]];
                                 for (const result of results) {
-                                    if (!result.time.data.length == 0) {
+                                    //console.log(result.time.data);
+                                    if (!result.time.data.destinations == 0) {
+                                        let arr = Object.values(result.time.data.destinations);
+
+                                        let arr_sorted = arr.flat().sort((a, b) => (a.waittime > b.waittime ? 1 : -1));
+
+                                        console.log(arr_sorted);
+
                                         let message = {
                                             text: {
                                                 text: ["Destination " + result.direction + " : " + result.time.data.destinations[Object.keys(result.time.data.destinations)[0]][0].waittime_text + "."],
@@ -141,7 +148,7 @@ app.post("/dialogflow", express.json(), (req, res) => {
                                         messages.push(message);
                                     }
                                 }
-                                console.log(messages);
+                                //console.log(messages);
                                 if (messages.length > 0) {
                                     res.send({
                                         fulfillmentMessages: messages,

@@ -1,21 +1,96 @@
 {
-    "id": "stop_area:TBC:SA:RPAGA",
-    "name": "RPA Gambetta",
-    "latitude": "44.8423010",
-    "longitude": "-0.5389510",
-    "city": "Floirac",
-    "stopPoints": [
-        {
-            "id": "stop_point:TBC:SP:5090",
-            "name": "RPA Gambetta",
-            "routes": [{ "id": "route:TBC:27_R", "name": "BORDEAUX Stalingrad", "line": { "id": "line:TBC:27", "name": "Ligne 27", "isSpecial": false, "isChartered": false, "isHidden": false } }],
-            "hasWheelchairBoarding": true
-        },
-        {
-            "id": "stop_point:TBC:SP:5091",
-            "name": "RPA Gambetta",
-            "routes": [{ "id": "route:TBC:27", "name": "LORMONT Buttini\u00e8re", "line": { "id": "line:TBC:27", "name": "Ligne 27", "isSpecial": false, "isChartered": false, "isHidden": false } }],
-            "hasWheelchairBoarding": true
-        }
-    ]
+    "destinations": {
+        "7172": [
+            {
+                "vehicle_lattitude": 44.837788673376,
+                "vehicle_longitude": -0.57638140663323,
+                "waittime_text": "2 minutes",
+                "trip_id": "268447904",
+                "schedule_id": "268756261",
+                "destination_id": "7172",
+                "destination_name": "BERGE DE GARONNE",
+                "departure": "2021-09-21 15:48:54",
+                "departure_commande": "2021-09-21 15:45:37",
+                "departure_theorique": "2021-09-21 15:45:37",
+                "arrival": "2021-09-21 15:48:54",
+                "arrival_commande": "2021-09-21 15:45:37",
+                "arrival_theorique": "2021-09-21 15:45:37",
+                "comment": "",
+                "realtime": "1",
+                "waittime": "00:02:20",
+                "updated_at": "2021-09-21 15:43:38",
+                "vehicle_id": "2503",
+                "vehicle_position_updated_at": "2021-09-21 15:46:27",
+                "origin": "bdsi_tram"
+            },
+            {
+                "vehicle_lattitude": 44.821547561693,
+                "vehicle_longitude": -0.58253982082957,
+                "waittime_text": "11 minutes",
+                "trip_id": "268448030",
+                "schedule_id": "268759219",
+                "destination_id": "7172",
+                "destination_name": "BERGE DE GARONNE",
+                "departure": "2021-09-21 15:57:29",
+                "departure_commande": "2021-09-21 15:55:46",
+                "departure_theorique": "2021-09-21 15:55:46",
+                "arrival": "2021-09-21 15:57:29",
+                "arrival_commande": "2021-09-21 15:55:46",
+                "arrival_theorique": "2021-09-21 15:55:46",
+                "comment": "",
+                "realtime": "1",
+                "waittime": "00:10:55",
+                "updated_at": "2021-09-21 15:46:03",
+                "vehicle_id": "1850",
+                "vehicle_position_updated_at": "2021-09-21 15:46:22",
+                "origin": "bdsi_tram"
+            }
+        ],
+        "5534": [
+            {
+                "vehicle_lattitude": 44.831236584292,
+                "vehicle_longitude": -0.57302573306449,
+                "waittime_text": "5 minutes",
+                "trip_id": "268448173",
+                "schedule_id": "268763095",
+                "destination_id": "5534",
+                "destination_name": "CLAVEAU",
+                "departure": "2021-09-21 15:51:44",
+                "departure_commande": "2021-09-21 15:50:34",
+                "departure_theorique": "2021-09-21 15:50:34",
+                "arrival": "2021-09-21 15:51:44",
+                "arrival_commande": "2021-09-21 15:50:34",
+                "arrival_theorique": "2021-09-21 15:50:34",
+                "comment": "",
+                "realtime": "1",
+                "waittime": "00:05:10",
+                "updated_at": "2021-09-21 15:46:17",
+                "vehicle_id": "2304",
+                "vehicle_position_updated_at": "2021-09-21 15:46:17",
+                "origin": "bdsi_tram"
+            },
+            {
+                "vehicle_lattitude": 44.810280161101,
+                "vehicle_longitude": -0.5915066180381,
+                "waittime_text": "15 minutes",
+                "trip_id": "268448151",
+                "schedule_id": "268762526",
+                "destination_id": "5534",
+                "destination_name": "CLAVEAU",
+                "departure": "2021-09-21 16:01:14",
+                "departure_commande": "2021-09-21 16:00:35",
+                "departure_theorique": "2021-09-21 16:00:35",
+                "arrival": "2021-09-21 16:01:14",
+                "arrival_commande": "2021-09-21 16:00:35",
+                "arrival_theorique": "2021-09-21 16:00:35",
+                "comment": "",
+                "realtime": "1",
+                "waittime": "00:14:40",
+                "updated_at": "2021-09-21 15:46:17",
+                "vehicle_id": "2801",
+                "vehicle_position_updated_at": "2021-09-21 15:46:17",
+                "origin": "bdsi_tram"
+            }
+        ]
+    }
 }
